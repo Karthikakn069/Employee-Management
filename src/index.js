@@ -9,6 +9,10 @@ import Details from './pages/Details';
 import PersonalInfo from './pages/PersonalInfo';
 const router = createBrowserRouter([
   {
+    path :'/Employee-Management',
+    element : <Login />,
+  },
+  {
     path :'/',
     element : <Login />,
   },
