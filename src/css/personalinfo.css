@@ -1,0 +1,35 @@
+.pi-outer{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pi-inner{
+  border: 2px solid black;
+  padding: 30px 70px 30px 70px;
+  border-radius: 10px;
+}
+.pi-head{
+  display: flex;
+  justify-content: center;
+}
+.sub-but button{
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.pi-ele input{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.pi-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

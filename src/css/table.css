@@ -1,0 +1,8 @@
+.tab-head{
+  display: flex;
+  justify-content: center;
+}
+.tab-con{
+  display: flex;
+  justify-content: center;
+}

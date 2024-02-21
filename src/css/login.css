@@ -1,0 +1,53 @@
+.login-outer{
+  height : 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-inner{
+  border: 2px solid black;
+  padding: 50px 30px 50px 30px;
+  border-radius: 20px;
+}
+.in-ele{
+  display: flex;
+  flex-direction: column;
+}
+.gend-group{
+  display: flex;
+}
+.log-form button{
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sub-but{
+  display: flex;
+  justify-content: center;
+}
+.in-ele input{
+  padding: 5px 10px 5px 10px;
+}
+.in-ele select{
+  padding: 5px 10px 5px 10px;
+}
+.in-ele label{
+  margin-bottom: 5px;
+}
+.details-link{
+  display: flex;
+  justify-content: center;
+}
+.err-msg{
+  display: flex;
+  justify-content: center;
+  color : red;
+  margin-top: 10px;
+}
