@@ -6,3 +6,11 @@
   display: flex;
   justify-content: center;
 }
+.up-button{
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 2px 0px 2px 0px;
+  border-radius: 2px;
+}

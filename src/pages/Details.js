@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import {useState ,useEffect} from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -14,6 +14,7 @@ function Details(){
   const head = ["Id","Name","Date of Birth","Department","Gender","Designation","Salary"]
   const [rows,setRows] = useState([])
   const [data,setData] = useState({});
+  const navigate = useNavigate();
   useEffect(()=>{
     /*const data = {
       0:{id:"1",name:"karthik" , dob:"04/02/2004" , dept : "CSE" , gend:"male" ,desgn:"Mr",salary:"50"},
@@ -48,12 +49,13 @@ function Details(){
                 <TableCell>Gender</TableCell>
                 <TableCell>Designation</TableCell>
                 <TableCell>Salary</TableCell>
-                <TableCell>Email</TableCell>
+                <TableCell style = {{"textAlign" : "centre"}}>Email</TableCell>
                 <TableCell>Phone Number</TableCell>
                 <TableCell>College</TableCell>
                 <TableCell>Degree</TableCell>
                 <TableCell>Graduation Year</TableCell>
                 <TableCell>Address</TableCell>
+                <TableCell>Options</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -67,12 +69,13 @@ function Details(){
                     <TableCell>{employee.gender}</TableCell>
                     <TableCell>{employee.designation}</TableCell>
                     <TableCell>{employee.salary}</TableCell>
-                    <TableCell>{employee.email}</TableCell>
-                    <TableCell>{employee.phno}</TableCell>
-                    <TableCell>{employee.college}</TableCell>
-                    <TableCell>{employee.degree}</TableCell>
-                    <TableCell>{employee.grad_year}</TableCell>
-                    <TableCell>{employee.address}</TableCell>
+                    <TableCell>{employee.email === null ? '-' : employee.email }</TableCell>
+                    <TableCell>{employee.phno === null ? '-' : employee.phno}</TableCell>
+                    <TableCell>{employee.college === null ? '-' : employee.college }</TableCell>
+                    <TableCell>{employee.degree === null ? '-' : employee.degree}</TableCell>
+                    <TableCell>{employee.grad_year === null ? '-' : employee.grad_year}</TableCell>
+                    <TableCell>{employee.address === null ? '-' : employee.address}</TableCell>
+                    <TableCell><button onClick={()=>{navigate(`/personal_info/${employee.id}`)}} className="up-button">Update Info</button></TableCell>
                   </TableRow>
                 ))
               }
